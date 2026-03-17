@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <header>
+            <nav>
+                <div class="logo">Portfolio.</div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero">
+                <div class="content">
+                    <h1 class="gradient-text">Hello, I'm <span id="name-placeholder">Trandung</span>.</h1>
+                    <p class="subtitle">Crafting <span class="highlight">immersive</span> digital experiences with modern JavaScript & semantic HTML.</p>
+                    <div class="cta-group">
+                        <a href="#projects" class="btn primary">View Projects</a>
+                        <a href="#contact" class="btn secondary">Get in Touch</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>I'm a developer dedicated to crafting <span class="highlight">high-performance</span>, visually stunning web experiences. With a deep focus on the latest JavaScript standards and semantic HTML5, I build digital products that are not only beautiful but accessible and scalable.</p>
+                    <p>My approach blends technical precision with creative design, ensuring every interaction feels intentional and fluid.</p>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Featured Work</h2>
+                <div class="project-grid">
+                    <article class="project-card glass stagger">
+                        <div class="project-image" style="background-image: url('./assets/tarot_project_thumbnail.png')"></div>
+                        <div class="project-info">
+                            <h3>Mystic Tarot Reader</h3>
+                            <p>An AI-powered application delivering intuitive interpretations with a mystical, dark-themed interface.</p>
+                            <div class="tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">AI Integration</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card glass stagger">
+                        <div class="project-image" style="background-image: url('./assets/ecommerce_project_thumbnail.png')"></div>
+                        <div class="project-info">
+                            <h3>EcoStore Platform</h3>
+                            <p>A minimalist e-commerce solution focused on sustainability and clean user experience.</p>
+                            <div class="tags">
+                                <span class="tag">CSS Grid</span>
+                                <span class="tag">Performance</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Get In Touch</h2>
+                <div class="contact-container glass">
+                    <p>Interested in collaborating or just want to say hi? Feel free to reach out through any of these platforms.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn">GitHub</a>
+                        <a href="#" class="social-btn">LinkedIn</a>
+                        <a href="mailto:hello@trandung.com" class="social-btn primary">Email Me</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Trandung. Built with passion and modern JavaScript.</p>
+        </footer>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
