@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Profile</title>
+    <title>Tran Dang Dung — Mobile Developer</title>
+    <meta name="description" content="Experienced Mobile Developer with 3+ years building high-quality Android and cross-platform apps using Kotlin and Flutter.">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -16,9 +19,11 @@
     <div id="app">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+
         <header>
             <nav>
-                <div class="logo">Portfolio.</div>
+                <div class="logo">Dung<span class="logo-dot">.</span></div>
                 <button id="menu-toggle" class="hamburger" aria-label="Open Menu">
                     <span></span>
                     <span></span>
@@ -26,8 +31,9 @@
                 </button>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Work</a></li>
-                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li>
                         <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
@@ -39,75 +45,279 @@
         </header>
 
         <main>
-            <section id="hero" data-aos="fade-up">
-                <div class="content">
-                    <h1 class="gradient-text">Hello, I'm <span id="name-placeholder">Trandung</span>.</h1>
-                    <p class="subtitle">Crafting <span class="highlight">immersive</span> digital experiences with modern JavaScript & semantic HTML.</p>
+            <!-- ═══════════════ HERO ═══════════════ -->
+            <section id="hero">
+                <div class="hero-content" data-aos="fade-up">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Available for opportunities
+                    </div>
+                    <h1 class="gradient-text">Tran Dang Dung</h1>
+                    <p class="subtitle">I'm a <span id="typed-role" class="highlight"></span><span class="cursor-blink">|</span></p>
+                    <p class="hero-description">Experienced Mobile Developer with 3+ years building high-quality Android and cross-platform applications using <strong>Kotlin</strong> and <strong>Flutter</strong>.</p>
                     <div class="cta-group">
-                        <a href="#projects" class="btn primary">View Projects</a>
-                        <a href="#contact" class="btn secondary">Get in Touch</a>
+                        <a href="#projects" class="btn primary"><i class="fas fa-rocket"></i> View Projects</a>
+                        <a href="#contact" class="btn secondary"><i class="fas fa-envelope"></i> Get in Touch</a>
+                        <a href="#" class="btn ghost" id="download-cv"><i class="fas fa-download"></i> Download CV</a>
+                    </div>
+                    <!-- Stats counters -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Years Exp.</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="3">0</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="about" data-aos="fade-right">
+            <!-- ═══════════════ ABOUT ═══════════════ -->
+            <section id="about" data-aos="fade-up">
                 <h2>About Me</h2>
-                <div class="about-content">
-                    <p>I'm a developer dedicated to crafting <span class="highlight">high-performance</span>, visually stunning web experiences. With a deep focus on the latest JavaScript standards and semantic HTML5, I build digital products that are not only beautiful but accessible and scalable.</p>
-                    <p>My approach blends technical precision with creative design, ensuring every interaction feels intentional and fluid.</p>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Experienced Mobile Developer with over <span class="highlight">3 years</span> of hands-on experience in building high-quality Android and cross-platform applications using <span class="highlight">Kotlin</span> and <span class="highlight">Flutter</span>.</p>
+                        <p>Specialized in scalable architecture (MVVM, Clean Architecture, SOLID), performance optimization, CI/CD integration, and blockchain-based solutions. A strong team player with a focus on clean code, technical design, and continuous improvement.</p>
+                    </div>
+                    <div class="about-info-cards">
+                        <div class="info-card glass" data-aos="fade-left" data-aos-delay="100">
+                            <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="info-detail">
+                                <h4>Education</h4>
+                                <p>B.IT — Posts & Telecommunications Institute of Technology</p>
+                                <span class="info-meta">Class of 2024 · GPA: 3.53/4.0</span>
+                            </div>
+                        </div>
+                        <div class="info-card glass" data-aos="fade-left" data-aos-delay="200">
+                            <div class="info-icon"><i class="fas fa-trophy"></i></div>
+                            <div class="info-detail">
+                                <h4>Awards</h4>
+                                <p>2nd Prize ICPC PTIT 2020 · Samsung Certificate</p>
+                                <span class="info-meta">Scholarship 2020-2024 · TOEIC 715</span>
+                            </div>
+                        </div>
+                        <div class="info-card glass" data-aos="fade-left" data-aos-delay="300">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-detail">
+                                <h4>Location</h4>
+                                <p>Hanoi, Vietnam</p>
+                                <span class="info-meta">Open to remote work</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
+            <!-- ═══════════════ SKILLS ═══════════════ -->
+            <section id="skills" data-aos="fade-up">
+                <h2>Tech Stack</h2>
+                <div class="skills-grid">
+                    <div class="skill-category glass" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="skill-header">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Mobile Development</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Dart</span>
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">KMP</span>
+                            <span class="skill-tag">Jetpack Compose</span>
+                            <span class="skill-tag">XML</span>
+                            <span class="skill-tag">Coroutines</span>
+                            <span class="skill-tag">Dagger/Hilt</span>
+                            <span class="skill-tag">Room</span>
+                            <span class="skill-tag">SQLite</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="skill-header">
+                            <i class="fas fa-cubes"></i>
+                            <h3>Architecture</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Clean Architecture</span>
+                            <span class="skill-tag">MVVM</span>
+                            <span class="skill-tag">SOLID</span>
+                            <span class="skill-tag">Modular Design</span>
+                            <span class="skill-tag">Reactive Programming</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="skill-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>Tools & Workflow</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">GitLab CI/CD</span>
+                            <span class="skill-tag">Agile/Scrum</span>
+                            <span class="skill-tag">Kanban</span>
+                            <span class="skill-tag">Jira</span>
+                            <span class="skill-tag">Confluence</span>
+                            <span class="skill-tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════ EXPERIENCE TIMELINE ═══════════════ -->
+            <section id="experience" data-aos="fade-up">
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Software Developer</h3>
+                                    <span class="company">TEKO Solution</span>
+                                </div>
+                                <span class="period">Dec 2022 — Present</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Designed and extended a scalable mobile carbon app using Flutter, supporting multiple merchants with reusable architecture.</li>
+                                <li>Developed a high-performance DeFi investment tracker app with Flutter, improving app speed and responsiveness by <strong>30%</strong>.</li>
+                                <li>Built Cardano blockchain transaction modules using Kotlin Multiplatform (KMP) and published them to npm.js, reducing front-end development time by <strong>15%</strong>.</li>
+                                <li>Maintained and enhanced a Kotlin Native e-commerce app base, enabling multi-merchant deployment with shared infrastructure.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Android Developer</h3>
+                                    <span class="company">HOLA 360 & Teasoft</span>
+                                </div>
+                                <span class="period">Sep 2021 — Oct 2022</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Developed Android applications from scratch using clean architecture and modern Android components.</li>
+                                <li>Built key features and reusable UI components based on business requirements and client branding.</li>
+                                <li>Refactored legacy code, improved performance, and ensured code quality through testing and code reviews.</li>
+                                <li>Collaborated with design and backend teams to deliver consistent and reliable user experiences.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════ PROJECTS ═══════════════ -->
             <section id="projects" data-aos="fade-up">
-                <h2>Featured Work</h2>
+                <h2>Featured Projects</h2>
                 <div class="project-grid">
-                    <article class="project-card glass stagger" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="project-image" style="background-image: url('./assets/tarot_project_thumbnail.png')"></div>
+                    <article class="project-card glass" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="project-image" id="project-img-karbon"></div>
                         <div class="project-info">
-                            <h3>Mystic Tarot Reader</h3>
-                            <p>An AI-powered application delivering intuitive interpretations with a mystical, dark-themed interface.</p>
+                            <h3>KarbonMap</h3>
+                            <p>A Flutter-based mobile app supporting MRV processes and forest/land management for government and environmental organizations.</p>
+                            <ul class="project-highlights">
+                                <li>Modular features with independent navigation & state management</li>
+                                <li>Caching and observation modules for traceability & performance metrics</li>
+                            </ul>
                             <div class="tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">AI Integration</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Bloc</span>
+                                <span class="tag">MobX</span>
+                                <span class="tag">Drift</span>
+                                <span class="tag">OpenTelemetry</span>
                             </div>
                         </div>
                     </article>
-                    <article class="project-card glass stagger" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="project-image" style="background-image: url('./assets/ecommerce_project_thumbnail.png')"></div>
+                    <article class="project-card glass" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="project-image" id="project-img-nio"></div>
                         <div class="project-info">
-                            <h3>EcoStore Platform</h3>
-                            <p>A minimalist e-commerce solution focused on sustainability and clean user experience.</p>
+                            <h3>Nio Wallet</h3>
+                            <p>A cross-platform cryptocurrency management app built with Flutter & Kotlin Multiplatform, published on Google Play and the App Store.</p>
+                            <ul class="project-highlights">
+                                <li>Real-time data streaming with SSE, reducing polling by 15%</li>
+                                <li>Cross-chain asset tracing for Cardano, EVM, Cosmos</li>
+                            </ul>
                             <div class="tags">
-                                <span class="tag">CSS Grid</span>
-                                <span class="tag">Performance</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">GetX</span>
+                                <span class="tag">Drift</span>
+                                <span class="tag">SSE</span>
+                                <span class="tag">KMP</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card glass" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="project-image" id="project-img-yield"></div>
+                        <div class="project-info">
+                            <h3>Yield-Aggregator</h3>
+                            <p>A protocol for supplying and borrowing tokens via Danogo Float pools on the Cardano blockchain.</p>
+                            <ul class="project-highlights">
+                                <li>Token supply/withdraw features with Kotlin-based transactions</li>
+                                <li>Integrated with Liqwid Protocol to boost yield via lending markets</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Kotlin Multiplatform</span>
+                                <span class="tag">Cardano</span>
+                                <span class="tag">DeFi</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card glass" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="project-image" id="project-img-smartpos"></div>
+                        <div class="project-info">
+                            <h3>Smart-POS</h3>
+                            <p>A hybrid B2B e-commerce platform for VNShop, Phong Vu, and more — combining native Android and embedded Flutter modules.</p>
+                            <ul class="project-highlights">
+                                <li>Flutter-based user module integrated via MethodChannel</li>
+                                <li>UI for authentication, profile management & app stability</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Android</span>
+                                <span class="tag">Dagger</span>
+                                <span class="tag">Retrofit</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">MethodChannel</span>
                             </div>
                         </div>
                     </article>
                 </div>
             </section>
 
-            <section id="blog" data-aos="fade-up">
-                <h2>Recent Notes</h2>
-                <div id="blog-posts" class="blog-grid">
-                    <!-- Posts will be injected here via JavaScript -->
-                </div>
-            </section>
-
+            <!-- ═══════════════ CONTACT ═══════════════ -->
             <section id="contact" data-aos="fade-up">
                 <h2>Get In Touch</h2>
                 <div class="contact-container glass">
                     <p>Interested in collaborating or just want to say hi? Feel free to reach out through any of these platforms.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-btn">GitHub</a>
-                        <a href="#" class="social-btn">LinkedIn</a>
-                        <a href="mailto:hello@trandung.com" class="social-btn primary">Email Me</a>
+                    <div class="contact-cards">
+                        <a href="mailto:dangdung2301@gmail.com" class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <span>dangdung2301@gmail.com</span>
+                        </a>
+                        <a href="tel:+84349878304" class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <span>0349 878 304</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/trandangdung" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://github.com/DungTran2301" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Profile</span>
+                        </a>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2024 Trandung. Built with passion and modern JavaScript.</p>
+            <p>&copy; 2026 Tran Dang Dung. Built with <i class="fas fa-heart" style="color: var(--primary-color);"></i> and modern JavaScript.</p>
         </footer>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
