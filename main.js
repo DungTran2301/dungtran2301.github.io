@@ -1,7 +1,7 @@
 import translations from './i18n.js';
 
 // ═══════════════ LOCALE MANAGEMENT ═══════════════
-let currentLang = localStorage.getItem('lang') || 'vi';
+let currentLang = localStorage.getItem('lang') || 'en';
 let currentRoles = translations[currentLang].roles;
 
 function applyTranslations(lang) {
