@@ -1,4 +1,61 @@
-// Initialize AOS (Animate on Scroll)
+import translations from './i18n.js';
+
+// ═══════════════ LOCALE MANAGEMENT ═══════════════
+let currentLang = localStorage.getItem('lang') || 'vi';
+let currentRoles = translations[currentLang].roles;
+
+function applyTranslations(lang) {
+    const t = translations[lang];
+    if (!t) return;
+
+    // Update text elements
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) {
+            el.textContent = t[key];
+        }
+    });
+
+    // Update HTML elements (for those with <span>, <strong> etc.)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (t[key] !== undefined) {
+            el.innerHTML = t[key];
+        }
+    });
+
+    // Update html lang attribute
+    document.documentElement.lang = lang === 'vi' ? 'vi' : 'en';
+
+    // Update roles for typing effect
+    currentRoles = t.roles;
+
+    // Update lang toggle button label
+    const langLabel = document.querySelector('.lang-label');
+    if (langLabel) {
+        langLabel.textContent = lang === 'vi' ? 'EN' : 'VI';
+    }
+}
+
+// Initial apply
+applyTranslations(currentLang);
+
+// Language Toggle
+const langToggle = document.getElementById('lang-toggle');
+if (langToggle) {
+    langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'vi' ? 'en' : 'vi';
+        localStorage.setItem('lang', currentLang);
+        applyTranslations(currentLang);
+
+        // Reset typing effect with new roles
+        roleIndex = 0;
+        charIndex = 0;
+        isDeleting = false;
+    });
+}
+
+// ═══════════════ INITIALIZE AOS ═══════════════
 AOS.init({
     duration: 800,
     once: true,
@@ -43,13 +100,6 @@ themeToggle.addEventListener('click', () => {
 
 // ═══════════════ TYPING EFFECT ═══════════════
 const typedElement = document.getElementById('typed-role');
-const roles = [
-    'Mobile Developer',
-    'Flutter Expert',
-    'Kotlin Enthusiast',
-    'Clean Architecture Advocate',
-    'Cross-Platform Builder'
-];
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -58,7 +108,7 @@ const deleteSpeed = 40;
 const pauseBetween = 2000;
 
 function typeRole() {
-    const currentRole = roles[roleIndex];
+    const currentRole = currentRoles[roleIndex % currentRoles.length];
 
     if (!isDeleting) {
         typedElement.textContent = currentRole.substring(0, charIndex + 1);
@@ -75,7 +125,7 @@ function typeRole() {
 
         if (charIndex === 0) {
             isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
+            roleIndex = (roleIndex + 1) % currentRoles.length;
         }
     }
 
@@ -99,7 +149,6 @@ function animateCounters() {
         function updateCounter(currentTime) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            // Ease out cubic
             const eased = 1 - Math.pow(1 - progress, 3);
             const current = Math.round(eased * target);
 
@@ -116,7 +165,6 @@ function animateCounters() {
     countersAnimated = true;
 }
 
-// Intersection Observer for counters
 const statsSection = document.querySelector('.hero-stats');
 if (statsSection) {
     const observer = new IntersectionObserver(
@@ -141,7 +189,7 @@ window.addEventListener('scroll', () => {
 
 // ═══════════════ ACTIVE NAV HIGHLIGHTING ═══════════════
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const navLinksAll = document.querySelectorAll('.nav-links a[href^="#"]');
 
 function highlightNav() {
     const scrollPos = window.scrollY + 150;
@@ -152,7 +200,7 @@ function highlightNav() {
         const id = section.getAttribute('id');
 
         if (scrollPos >= top && scrollPos < top + height) {
-            navLinks.forEach(link => {
+            navLinksAll.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${id}`) {
                     link.classList.add('active');
@@ -186,8 +234,8 @@ if (menuToggle && navMenu) {
 }
 
 // ═══════════════ PROJECT IMAGE ICONS ═══════════════
-// Add icon labels to project images
 const projectIcons = {
+    'project-img-smartboard': { icon: '📋', label: 'Smart Board' },
     'project-img-karbon': { icon: '🌿', label: 'KarbonMap' },
     'project-img-nio': { icon: '💎', label: 'Nio Wallet' },
     'project-img-yield': { icon: '📈', label: 'Yield Aggregator' },

@@ -171,6 +171,30 @@ nav a.active::after {
     fill: currentColor;
 }
 
+/* Language Toggle */
+.lang-btn {
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    color: var(--primary-light);
+    cursor: pointer;
+    padding: 0.3rem 0.7rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: var(--font-main);
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.lang-btn:hover {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
 /* Mobile Menu */
 .hamburger {
     display: none;
@@ -297,6 +321,33 @@ h2::after {
 /* ═══════════════ HERO ═══════════════ */
 .hero-content {
     max-width: 800px;
+}
+
+/* Avatar */
+.avatar-wrapper {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    background-size: 200% 200%;
+    animation: gradient-shift 6s ease infinite, avatar-glow 4s ease-in-out infinite alternate;
+    position: relative;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--bg-color);
+    display: block;
+}
+
+@keyframes avatar-glow {
+    0% { box-shadow: 0 0 15px rgba(99, 102, 241, 0.2), 0 0 30px rgba(56, 189, 248, 0.1); }
+    100% { box-shadow: 0 0 25px rgba(99, 102, 241, 0.35), 0 0 50px rgba(56, 189, 248, 0.15); }
 }
 
 .hero-badge {
@@ -779,6 +830,10 @@ h2::after {
         rgba(56, 189, 248, 0.05) 50%,
         rgba(45, 212, 191, 0.05) 100%
     );
+}
+
+#project-img-smartboard {
+    background: linear-gradient(135deg, #1e3a5f, #2563eb);
 }
 
 #project-img-karbon {

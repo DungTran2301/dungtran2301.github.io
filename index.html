@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,11 +30,17 @@
                     <span></span>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" data-i18n="nav_about">Giới thiệu</a></li>
+                    <li><a href="#skills" data-i18n="nav_skills">Kỹ năng</a></li>
+                    <li><a href="#experience" data-i18n="nav_experience">Kinh nghiệm</a></li>
+                    <li><a href="#projects" data-i18n="nav_projects">Dự án</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Liên hệ</a></li>
+                    <li>
+                        <!-- Language Toggle -->
+                        <button id="lang-toggle" class="lang-btn" aria-label="Switch Language">
+                            <span class="lang-label">EN</span>
+                        </button>
+                    </li>
                     <li>
                         <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
                             <svg class="sun-icon" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58l-1.41-1.41c-.39-.39-1.03-.39-1.42 0s-.39 1.03 0 1.42l1.41 1.41c.39.39 1.03.39 1.42 0s.39-1.03 0-1.42zm14.85 14.85l-1.41-1.41c-.39-.39-1.03-.39-1.42 0s-.39 1.03 0 1.42l1.41 1.41c.39.39 1.03.39 1.42 0s.39-1.03 0-1.42zM4.58 18.01l-1.41 1.41c-.39.39-.39 1.03 0 1.42s1.03.39 1.42 0l1.41-1.41c.39-.39.39-1.03 0-1.42s-1.03-.39-1.42 0zM18.01 5.99l1.41-1.41c.39-.39.39-1.03 0-1.42s-1.03-.39-1.42 0l-1.41 1.41c-.39.39-.39 1.03 0 1.42s1.03.39 1.42 0z"/></svg>
@@ -48,33 +54,37 @@
             <!-- ═══════════════ HERO ═══════════════ -->
             <section id="hero">
                 <div class="hero-content" data-aos="fade-up">
+                    <!-- Avatar -->
+                    <div class="avatar-wrapper">
+                        <img src="./assets/avatar.jpg" alt="Tran Dang Dung" class="avatar" loading="lazy">
+                    </div>
                     <div class="hero-badge">
                         <span class="badge-dot"></span>
-                        Available for opportunities
+                        <span data-i18n="hero_badge">Sẵn sàng cho cơ hội mới</span>
                     </div>
                     <h1 class="gradient-text">Tran Dang Dung</h1>
-                    <p class="subtitle">I'm a <span id="typed-role" class="highlight"></span><span class="cursor-blink">|</span></p>
-                    <p class="hero-description">Experienced Mobile Developer with 3+ years building high-quality Android and cross-platform applications using <strong>Kotlin</strong> and <strong>Flutter</strong>.</p>
+                    <p class="subtitle"><span data-i18n="hero_subtitle_prefix">Tôi là </span><span id="typed-role" class="highlight"></span><span class="cursor-blink">|</span></p>
+                    <p class="hero-description" data-i18n-html="hero_description">Lập trình viên Mobile với hơn 3 năm kinh nghiệm xây dựng các ứng dụng Android và đa nền tảng chất lượng cao sử dụng <strong>Kotlin</strong> và <strong>Flutter</strong>.</p>
                     <div class="cta-group">
-                        <a href="#projects" class="btn primary"><i class="fas fa-rocket"></i> View Projects</a>
-                        <a href="#contact" class="btn secondary"><i class="fas fa-envelope"></i> Get in Touch</a>
-                        <a href="#" class="btn ghost" id="download-cv"><i class="fas fa-download"></i> Download CV</a>
+                        <a href="#projects" class="btn primary"><i class="fas fa-rocket"></i> <span data-i18n="hero_btn_projects">Xem dự án</span></a>
+                        <a href="#contact" class="btn secondary"><i class="fas fa-envelope"></i> <span data-i18n="hero_btn_contact">Liên hệ</span></a>
+                        <a href="#" class="btn ghost" id="download-cv"><i class="fas fa-download"></i> <span data-i18n="hero_btn_cv">Tải CV</span></a>
                     </div>
                     <!-- Stats counters -->
                     <div class="hero-stats">
                         <div class="stat-item">
                             <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
-                            <span class="stat-label">Years Exp.</span>
+                            <span class="stat-label" data-i18n="stat_years">Năm KN</span>
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
-                            <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
-                            <span class="stat-label">Projects</span>
+                            <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label" data-i18n="stat_projects">Dự án</span>
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="3">0</span>
-                            <span class="stat-label">Certifications</span>
+                            <span class="stat-label" data-i18n="stat_certs">Chứng chỉ</span>
                         </div>
                     </div>
                 </div>
@@ -82,35 +92,35 @@
 
             <!-- ═══════════════ ABOUT ═══════════════ -->
             <section id="about" data-aos="fade-up">
-                <h2>About Me</h2>
+                <h2 data-i18n="about_title">Giới thiệu</h2>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>Experienced Mobile Developer with over <span class="highlight">3 years</span> of hands-on experience in building high-quality Android and cross-platform applications using <span class="highlight">Kotlin</span> and <span class="highlight">Flutter</span>.</p>
-                        <p>Specialized in scalable architecture (MVVM, Clean Architecture, SOLID), performance optimization, CI/CD integration, and blockchain-based solutions. A strong team player with a focus on clean code, technical design, and continuous improvement.</p>
+                        <p data-i18n-html="about_p1">Lập trình viên Mobile với hơn <span class="highlight">3 năm</span> kinh nghiệm thực tế trong việc xây dựng các ứng dụng Android và đa nền tảng chất lượng cao sử dụng <span class="highlight">Kotlin</span> và <span class="highlight">Flutter</span>.</p>
+                        <p data-i18n="about_p2">Chuyên về kiến trúc mở rộng (MVVM, Clean Architecture, SOLID), tối ưu hiệu năng, tích hợp CI/CD, và các giải pháp blockchain. Luôn tập trung vào code sạch, thiết kế kỹ thuật và cải tiến liên tục.</p>
                     </div>
                     <div class="about-info-cards">
                         <div class="info-card glass" data-aos="fade-left" data-aos-delay="100">
                             <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
                             <div class="info-detail">
-                                <h4>Education</h4>
-                                <p>B.IT — Posts & Telecommunications Institute of Technology</p>
-                                <span class="info-meta">Class of 2024 · GPA: 3.53/4.0</span>
+                                <h4 data-i18n="edu_title">Học vấn</h4>
+                                <p data-i18n="edu_desc">Cử nhân CNTT — Học viện Công nghệ Bưu chính Viễn thông</p>
+                                <span class="info-meta" data-i18n="edu_meta">Khóa 2024 · Xếp loại: Giỏi</span>
                             </div>
                         </div>
                         <div class="info-card glass" data-aos="fade-left" data-aos-delay="200">
                             <div class="info-icon"><i class="fas fa-trophy"></i></div>
                             <div class="info-detail">
-                                <h4>Awards</h4>
-                                <p>2nd Prize ICPC PTIT 2020 · Samsung Certificate</p>
-                                <span class="info-meta">Scholarship 2020-2024 · TOEIC 715</span>
+                                <h4 data-i18n="awards_title">Giải thưởng</h4>
+                                <p data-i18n="awards_desc">Giải Nhì ICPC PTIT 2020 · Chứng chỉ Samsung</p>
+                                <span class="info-meta" data-i18n="awards_meta">Đội tuyển Olympic Tin học PTIT 2020 · Học bổng 2020-2024 · TOEIC 715</span>
                             </div>
                         </div>
                         <div class="info-card glass" data-aos="fade-left" data-aos-delay="300">
                             <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="info-detail">
-                                <h4>Location</h4>
-                                <p>Hanoi, Vietnam</p>
-                                <span class="info-meta">Open to remote work</span>
+                                <h4 data-i18n="location_title">Địa điểm</h4>
+                                <p data-i18n="location_desc">Hà Nội, Việt Nam</p>
+                                <span class="info-meta" data-i18n="location_meta">Sẵn sàng làm việc từ xa</span>
                             </div>
                         </div>
                     </div>
@@ -119,12 +129,12 @@
 
             <!-- ═══════════════ SKILLS ═══════════════ -->
             <section id="skills" data-aos="fade-up">
-                <h2>Tech Stack</h2>
+                <h2 data-i18n="skills_title">Công nghệ</h2>
                 <div class="skills-grid">
                     <div class="skill-category glass" data-aos="zoom-in" data-aos-delay="100">
                         <div class="skill-header">
                             <i class="fas fa-mobile-alt"></i>
-                            <h3>Mobile Development</h3>
+                            <h3 data-i18n="skills_mobile">Phát triển Mobile</h3>
                         </div>
                         <div class="skill-tags">
                             <span class="skill-tag">Flutter</span>
@@ -132,7 +142,7 @@
                             <span class="skill-tag">Kotlin</span>
                             <span class="skill-tag">KMP</span>
                             <span class="skill-tag">Jetpack Compose</span>
-                            <span class="skill-tag">XML</span>
+                            <span class="skill-tag">Native C++</span>
                             <span class="skill-tag">Coroutines</span>
                             <span class="skill-tag">Dagger/Hilt</span>
                             <span class="skill-tag">Room</span>
@@ -142,20 +152,21 @@
                     <div class="skill-category glass" data-aos="zoom-in" data-aos-delay="200">
                         <div class="skill-header">
                             <i class="fas fa-cubes"></i>
-                            <h3>Architecture</h3>
+                            <h3 data-i18n="skills_arch">Kiến trúc</h3>
                         </div>
                         <div class="skill-tags">
                             <span class="skill-tag">Clean Architecture</span>
                             <span class="skill-tag">MVVM</span>
                             <span class="skill-tag">SOLID</span>
                             <span class="skill-tag">Modular Design</span>
+                            <span class="skill-tag">Bloc / Cubit</span>
                             <span class="skill-tag">Reactive Programming</span>
                         </div>
                     </div>
                     <div class="skill-category glass" data-aos="zoom-in" data-aos-delay="300">
                         <div class="skill-header">
                             <i class="fas fa-tools"></i>
-                            <h3>Tools & Workflow</h3>
+                            <h3 data-i18n="skills_tools">Công cụ & Quy trình</h3>
                         </div>
                         <div class="skill-tags">
                             <span class="skill-tag">GitLab CI/CD</span>
@@ -164,6 +175,7 @@
                             <span class="skill-tag">Jira</span>
                             <span class="skill-tag">Confluence</span>
                             <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">WebSocket</span>
                         </div>
                     </div>
                 </div>
@@ -171,41 +183,62 @@
 
             <!-- ═══════════════ EXPERIENCE TIMELINE ═══════════════ -->
             <section id="experience" data-aos="fade-up">
-                <h2>Experience</h2>
+                <h2 data-i18n="exp_title">Kinh nghiệm</h2>
                 <div class="timeline">
+                    <!-- CMC Global -->
                     <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content glass">
                             <div class="timeline-header">
                                 <div>
-                                    <h3>Software Developer</h3>
-                                    <span class="company">TEKO Solution</span>
+                                    <h3 data-i18n="exp_cmc_role">Mobile Developer</h3>
+                                    <span class="company" data-i18n="exp_cmc_company">CMC Global</span>
                                 </div>
-                                <span class="period">Dec 2022 — Present</span>
+                                <span class="period" data-i18n="exp_cmc_period">Tháng 1/2026 — Hiện tại</span>
                             </div>
                             <ul class="timeline-list">
-                                <li>Designed and extended a scalable mobile carbon app using Flutter, supporting multiple merchants with reusable architecture.</li>
-                                <li>Developed a high-performance DeFi investment tracker app with Flutter, improving app speed and responsiveness by <strong>30%</strong>.</li>
-                                <li>Built Cardano blockchain transaction modules using Kotlin Multiplatform (KMP) and published them to npm.js, reducing front-end development time by <strong>15%</strong>.</li>
-                                <li>Maintained and enhanced a Kotlin Native e-commerce app base, enabling multi-merchant deployment with shared infrastructure.</li>
+                                <li data-i18n-html="exp_cmc_1">Tham gia dự án Smart Board — ứng dụng bảng thông minh hỗ trợ cộng tác thời gian thực.</li>
+                                <li data-i18n-html="exp_cmc_2">Triển khai luồng onboard hướng dẫn người dùng mới với trải nghiệm mượt mà và trực quan.</li>
+                                <li data-i18n-html="exp_cmc_3">Phát triển tính năng video call và share screen sử dụng <strong>Janus WebRTC Gateway</strong>, tích hợp Native C++ qua FFI.</li>
+                                <li data-i18n-html="exp_cmc_4">Sử dụng WebSocket cho real-time communication, Bloc/Cubit cho state management và Clean Architecture.</li>
                             </ul>
                         </div>
                     </div>
+                    <!-- TEKO Solution -->
                     <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content glass">
                             <div class="timeline-header">
                                 <div>
-                                    <h3>Android Developer</h3>
-                                    <span class="company">HOLA 360 & Teasoft</span>
+                                    <h3 data-i18n="exp_teko_role">Software Developer</h3>
+                                    <span class="company" data-i18n="exp_teko_company">TEKO Solution</span>
                                 </div>
-                                <span class="period">Sep 2021 — Oct 2022</span>
+                                <span class="period" data-i18n="exp_teko_period">Tháng 12/2022 — Tháng 12/2025</span>
                             </div>
                             <ul class="timeline-list">
-                                <li>Developed Android applications from scratch using clean architecture and modern Android components.</li>
-                                <li>Built key features and reusable UI components based on business requirements and client branding.</li>
-                                <li>Refactored legacy code, improved performance, and ensured code quality through testing and code reviews.</li>
-                                <li>Collaborated with design and backend teams to deliver consistent and reliable user experiences.</li>
+                                <li data-i18n-html="exp_teko_1">Thiết kế và mở rộng ứng dụng carbon di động với Flutter, hỗ trợ nhiều merchant với kiến trúc tái sử dụng.</li>
+                                <li data-i18n-html="exp_teko_2">Phát triển ứng dụng theo dõi đầu tư DeFi hiệu suất cao với Flutter, cải thiện tốc độ ứng dụng <strong>30%</strong>.</li>
+                                <li data-i18n-html="exp_teko_3">Xây dựng module giao dịch blockchain Cardano sử dụng Kotlin Multiplatform (KMP) và publish lên npm.js, giảm <strong>15%</strong> thời gian phát triển front-end.</li>
+                                <li data-i18n-html="exp_teko_4">Duy trì và nâng cấp ứng dụng e-commerce Kotlin Native, hỗ trợ triển khai đa merchant.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- HOLA 360 -->
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 data-i18n="exp_hola_role">Android Developer</h3>
+                                    <span class="company" data-i18n="exp_hola_company">HOLA 360 & Teasoft</span>
+                                </div>
+                                <span class="period" data-i18n="exp_hola_period">Tháng 9/2021 — Tháng 10/2022</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li data-i18n="exp_hola_1">Phát triển ứng dụng Android từ đầu sử dụng clean architecture và các component Android hiện đại.</li>
+                                <li data-i18n="exp_hola_2">Xây dựng các tính năng chính và UI component tái sử dụng theo yêu cầu nghiệp vụ.</li>
+                                <li data-i18n="exp_hola_3">Refactor legacy code, cải thiện hiệu năng và đảm bảo chất lượng code qua testing và code review.</li>
+                                <li data-i18n="exp_hola_4">Phối hợp với team design và backend để mang lại trải nghiệm người dùng nhất quán.</li>
                             </ul>
                         </div>
                     </div>
@@ -214,16 +247,36 @@
 
             <!-- ═══════════════ PROJECTS ═══════════════ -->
             <section id="projects" data-aos="fade-up">
-                <h2>Featured Projects</h2>
+                <h2 data-i18n="projects_title">Dự án nổi bật</h2>
                 <div class="project-grid">
+                    <!-- Smart Board -->
+                    <article class="project-card glass" data-aos="zoom-in" data-aos-delay="50">
+                        <div class="project-image" id="project-img-smartboard"></div>
+                        <div class="project-info">
+                            <h3 data-i18n="proj_smartboard_name">Smart Board</h3>
+                            <p data-i18n="proj_smartboard_desc">Ứng dụng bảng thông minh hỗ trợ cộng tác real-time, video call và chia sẻ màn hình sử dụng Janus WebRTC.</p>
+                            <ul class="project-highlights">
+                                <li data-i18n="proj_smartboard_h1">Luồng onboard và hướng dẫn người dùng mới</li>
+                                <li data-i18n="proj_smartboard_h2">Video call & share screen qua Janus + Native C++ FFI</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Native C++</span>
+                                <span class="tag">Janus</span>
+                                <span class="tag">WebSocket</span>
+                                <span class="tag">Bloc/Cubit</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- KarbonMap -->
                     <article class="project-card glass" data-aos="zoom-in" data-aos-delay="100">
                         <div class="project-image" id="project-img-karbon"></div>
                         <div class="project-info">
-                            <h3>KarbonMap</h3>
-                            <p>A Flutter-based mobile app supporting MRV processes and forest/land management for government and environmental organizations.</p>
+                            <h3 data-i18n="proj_karbon_name">KarbonMap</h3>
+                            <p data-i18n="proj_karbon_desc">Ứng dụng di động Flutter hỗ trợ quy trình MRV và quản lý rừng/đất cho các tổ chức chính phủ và môi trường.</p>
                             <ul class="project-highlights">
-                                <li>Modular features with independent navigation & state management</li>
-                                <li>Caching and observation modules for traceability & performance metrics</li>
+                                <li data-i18n="proj_karbon_h1">Tính năng modular với navigation & state management độc lập</li>
+                                <li data-i18n="proj_karbon_h2">Module caching và observation cho traceability & hiệu năng</li>
                             </ul>
                             <div class="tags">
                                 <span class="tag">Flutter</span>
@@ -234,14 +287,15 @@
                             </div>
                         </div>
                     </article>
+                    <!-- Nio Wallet -->
                     <article class="project-card glass" data-aos="zoom-in" data-aos-delay="200">
                         <div class="project-image" id="project-img-nio"></div>
                         <div class="project-info">
-                            <h3>Nio Wallet</h3>
-                            <p>A cross-platform cryptocurrency management app built with Flutter & Kotlin Multiplatform, published on Google Play and the App Store.</p>
+                            <h3 data-i18n="proj_nio_name">Nio Wallet</h3>
+                            <p data-i18n="proj_nio_desc">Ứng dụng quản lý tiền điện tử đa nền tảng, xây dựng bằng Flutter & Kotlin Multiplatform, xuất bản trên Google Play và App Store.</p>
                             <ul class="project-highlights">
-                                <li>Real-time data streaming with SSE, reducing polling by 15%</li>
-                                <li>Cross-chain asset tracing for Cardano, EVM, Cosmos</li>
+                                <li data-i18n="proj_nio_h1">Streaming dữ liệu real-time với SSE, giảm 15% polling</li>
+                                <li data-i18n="proj_nio_h2">Theo dõi tài sản đa chuỗi Cardano, EVM, Cosmos</li>
                             </ul>
                             <div class="tags">
                                 <span class="tag">Flutter</span>
@@ -252,14 +306,15 @@
                             </div>
                         </div>
                     </article>
+                    <!-- Yield-Aggregator -->
                     <article class="project-card glass" data-aos="zoom-in" data-aos-delay="300">
                         <div class="project-image" id="project-img-yield"></div>
                         <div class="project-info">
-                            <h3>Yield-Aggregator</h3>
-                            <p>A protocol for supplying and borrowing tokens via Danogo Float pools on the Cardano blockchain.</p>
+                            <h3 data-i18n="proj_yield_name">Yield-Aggregator</h3>
+                            <p data-i18n="proj_yield_desc">Giao thức cung cấp và vay token qua Danogo Float pools trên blockchain Cardano.</p>
                             <ul class="project-highlights">
-                                <li>Token supply/withdraw features with Kotlin-based transactions</li>
-                                <li>Integrated with Liqwid Protocol to boost yield via lending markets</li>
+                                <li data-i18n="proj_yield_h1">Tính năng supply/withdraw token với giao dịch Kotlin</li>
+                                <li data-i18n="proj_yield_h2">Tích hợp Liqwid Protocol để tăng lợi suất</li>
                             </ul>
                             <div class="tags">
                                 <span class="tag">Kotlin Multiplatform</span>
@@ -268,14 +323,15 @@
                             </div>
                         </div>
                     </article>
+                    <!-- Smart-POS -->
                     <article class="project-card glass" data-aos="zoom-in" data-aos-delay="400">
                         <div class="project-image" id="project-img-smartpos"></div>
                         <div class="project-info">
-                            <h3>Smart-POS</h3>
-                            <p>A hybrid B2B e-commerce platform for VNShop, Phong Vu, and more — combining native Android and embedded Flutter modules.</p>
+                            <h3 data-i18n="proj_smartpos_name">Smart-POS</h3>
+                            <p data-i18n="proj_smartpos_desc">Nền tảng thương mại điện tử B2B hybrid cho VNShop, Phong Vu — kết hợp Android native và Flutter module.</p>
                             <ul class="project-highlights">
-                                <li>Flutter-based user module integrated via MethodChannel</li>
-                                <li>UI for authentication, profile management & app stability</li>
+                                <li data-i18n="proj_smartpos_h1">Module người dùng Flutter tích hợp qua MethodChannel</li>
+                                <li data-i18n="proj_smartpos_h2">UI xác thực, quản lý hồ sơ & ổn định ứng dụng</li>
                             </ul>
                             <div class="tags">
                                 <span class="tag">Android</span>
@@ -291,9 +347,9 @@
 
             <!-- ═══════════════ CONTACT ═══════════════ -->
             <section id="contact" data-aos="fade-up">
-                <h2>Get In Touch</h2>
+                <h2 data-i18n="contact_title">Liên hệ</h2>
                 <div class="contact-container glass">
-                    <p>Interested in collaborating or just want to say hi? Feel free to reach out through any of these platforms.</p>
+                    <p data-i18n="contact_desc">Bạn muốn hợp tác hoặc chỉ muốn chào hỏi? Hãy liên hệ qua các kênh bên dưới.</p>
                     <div class="contact-cards">
                         <a href="mailto:dangdung2301@gmail.com" class="contact-card">
                             <i class="fas fa-envelope"></i>
@@ -303,13 +359,13 @@
                             <i class="fas fa-phone"></i>
                             <span>0349 878 304</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/trandangdung" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <a href="https://www.linkedin.com/in/tran-dang-dung-073158221/" target="_blank" rel="noopener noreferrer" class="contact-card">
                             <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn Profile</span>
+                            <span data-i18n="contact_linkedin">Hồ sơ LinkedIn</span>
                         </a>
                         <a href="https://github.com/DungTran2301" target="_blank" rel="noopener noreferrer" class="contact-card">
                             <i class="fab fa-github"></i>
-                            <span>GitHub Profile</span>
+                            <span data-i18n="contact_github">Hồ sơ GitHub</span>
                         </a>
                     </div>
                 </div>
@@ -317,7 +373,7 @@
         </main>
 
         <footer>
-            <p>&copy; 2026 Tran Dang Dung. Built with <i class="fas fa-heart" style="color: var(--primary-color);"></i> and modern JavaScript.</p>
+            <p>&copy; 2026 <span data-i18n="footer_text">Tran Dang Dung. Xây dựng với</span> <i class="fas fa-heart" style="color: var(--primary-color);"></i> <span data-i18n="footer_suffix">và JavaScript hiện đại.</span></p>
         </footer>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

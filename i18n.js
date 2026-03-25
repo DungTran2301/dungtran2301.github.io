@@ -1,0 +1,214 @@
+const translations = {
+    vi: {
+        // Nav
+        nav_about: "Giới thiệu",
+        nav_skills: "Kỹ năng",
+        nav_experience: "Kinh nghiệm",
+        nav_projects: "Dự án",
+        nav_contact: "Liên hệ",
+
+        // Hero
+        hero_badge: "Sẵn sàng cho cơ hội mới",
+        hero_subtitle_prefix: "Tôi là ",
+        hero_description: "Lập trình viên Mobile với hơn 3 năm kinh nghiệm xây dựng các ứng dụng Android và đa nền tảng chất lượng cao sử dụng <strong>Kotlin</strong> và <strong>Flutter</strong>.",
+        hero_btn_projects: "Xem dự án",
+        hero_btn_contact: "Liên hệ",
+        hero_btn_cv: "Tải CV",
+        stat_years: "Năm KN",
+        stat_projects: "Dự án",
+        stat_certs: "Chứng chỉ",
+
+        // Typed roles
+        roles: [
+            "Lập trình viên Mobile",
+            "Chuyên gia Flutter",
+            "Đam mê Kotlin",
+            "Kiến trúc Clean Architecture",
+            "Xây dựng đa nền tảng"
+        ],
+
+        // About
+        about_title: "Giới thiệu",
+        about_p1: 'Lập trình viên Mobile với hơn <span class="highlight">3 năm</span> kinh nghiệm thực tế trong việc xây dựng các ứng dụng Android và đa nền tảng chất lượng cao sử dụng <span class="highlight">Kotlin</span> và <span class="highlight">Flutter</span>.',
+        about_p2: "Chuyên về kiến trúc mở rộng (MVVM, Clean Architecture, SOLID), tối ưu hiệu năng, tích hợp CI/CD, và các giải pháp blockchain. Luôn tập trung vào code sạch, thiết kế kỹ thuật và cải tiến liên tục.",
+        edu_title: "Học vấn",
+        edu_desc: "Cử nhân CNTT — Học viện Công nghệ Bưu chính Viễn thông",
+        edu_meta: "Khóa 2024 · Xếp loại: Giỏi",
+        awards_title: "Giải thưởng",
+        awards_desc: "Giải Nhì ICPC PTIT 2020 · Chứng chỉ Samsung",
+        awards_meta: "Đội tuyển Olympic Tin học PTIT 2020 · Học bổng 2020-2024 · TOEIC 715",
+        location_title: "Địa điểm",
+        location_desc: "Hà Nội, Việt Nam",
+        location_meta: "Sẵn sàng làm việc từ xa",
+
+        // Skills
+        skills_title: "Công nghệ",
+        skills_mobile: "Phát triển Mobile",
+        skills_arch: "Kiến trúc",
+        skills_tools: "Công cụ & Quy trình",
+
+        // Experience
+        exp_title: "Kinh nghiệm",
+        exp_cmc_role: "Mobile Developer",
+        exp_cmc_company: "CMC Global",
+        exp_cmc_period: "Tháng 1/2026 — Hiện tại",
+        exp_cmc_1: "Tham gia dự án Smart Board — ứng dụng bảng thông minh hỗ trợ cộng tác thời gian thực.",
+        exp_cmc_2: "Triển khai luồng onboard hướng dẫn người dùng mới với trải nghiệm mượt mà và trực quan.",
+        exp_cmc_3: "Phát triển tính năng video call và share screen sử dụng <strong>Janus WebRTC Gateway</strong>, tích hợp Native C++ qua FFI.",
+        exp_cmc_4: "Sử dụng WebSocket cho real-time communication, Bloc/Cubit cho state management và Clean Architecture.",
+        exp_teko_role: "Software Developer",
+        exp_teko_company: "TEKO Solution",
+        exp_teko_period: "Tháng 12/2022 — Tháng 12/2025",
+        exp_teko_1: "Thiết kế và mở rộng ứng dụng carbon di động với Flutter, hỗ trợ nhiều merchant với kiến trúc tái sử dụng.",
+        exp_teko_2: 'Phát triển ứng dụng theo dõi đầu tư DeFi hiệu suất cao với Flutter, cải thiện tốc độ ứng dụng <strong>30%</strong>.',
+        exp_teko_3: 'Xây dựng module giao dịch blockchain Cardano sử dụng Kotlin Multiplatform (KMP) và publish lên npm.js, giảm <strong>15%</strong> thời gian phát triển front-end.',
+        exp_teko_4: "Duy trì và nâng cấp ứng dụng e-commerce Kotlin Native, hỗ trợ triển khai đa merchant.",
+        exp_hola_role: "Android Developer",
+        exp_hola_company: "HOLA 360 & Teasoft",
+        exp_hola_period: "Tháng 9/2021 — Tháng 10/2022",
+        exp_hola_1: "Phát triển ứng dụng Android từ đầu sử dụng clean architecture và các component Android hiện đại.",
+        exp_hola_2: "Xây dựng các tính năng chính và UI component tái sử dụng theo yêu cầu nghiệp vụ.",
+        exp_hola_3: "Refactor legacy code, cải thiện hiệu năng và đảm bảo chất lượng code qua testing và code review.",
+        exp_hola_4: "Phối hợp với team design và backend để mang lại trải nghiệm người dùng nhất quán.",
+
+        // Projects
+        projects_title: "Dự án nổi bật",
+        proj_smartboard_name: "Smart Board",
+        proj_smartboard_desc: "Ứng dụng bảng thông minh hỗ trợ cộng tác real-time, video call và chia sẻ màn hình sử dụng Janus WebRTC.",
+        proj_smartboard_h1: "Luồng onboard và hướng dẫn người dùng mới",
+        proj_smartboard_h2: "Video call & share screen qua Janus + Native C++ FFI",
+        proj_karbon_name: "KarbonMap",
+        proj_karbon_desc: "Ứng dụng di động Flutter hỗ trợ quy trình MRV và quản lý rừng/đất cho các tổ chức chính phủ và môi trường.",
+        proj_karbon_h1: "Tính năng modular với navigation & state management độc lập",
+        proj_karbon_h2: "Module caching và observation cho traceability & hiệu năng",
+        proj_nio_name: "Nio Wallet",
+        proj_nio_desc: "Ứng dụng quản lý tiền điện tử đa nền tảng, xây dựng bằng Flutter & Kotlin Multiplatform, xuất bản trên Google Play và App Store.",
+        proj_nio_h1: "Streaming dữ liệu real-time với SSE, giảm 15% polling",
+        proj_nio_h2: "Theo dõi tài sản đa chuỗi Cardano, EVM, Cosmos",
+        proj_yield_name: "Yield-Aggregator",
+        proj_yield_desc: "Giao thức cung cấp và vay token qua Danogo Float pools trên blockchain Cardano.",
+        proj_yield_h1: "Tính năng supply/withdraw token với giao dịch Kotlin",
+        proj_yield_h2: "Tích hợp Liqwid Protocol để tăng lợi suất",
+        proj_smartpos_name: "Smart-POS",
+        proj_smartpos_desc: "Nền tảng thương mại điện tử B2B hybrid cho VNShop, Phong Vu — kết hợp Android native và Flutter module.",
+        proj_smartpos_h1: "Module người dùng Flutter tích hợp qua MethodChannel",
+        proj_smartpos_h2: "UI xác thực, quản lý hồ sơ & ổn định ứng dụng",
+
+        // Contact
+        contact_title: "Liên hệ",
+        contact_desc: "Bạn muốn hợp tác hoặc chỉ muốn chào hỏi? Hãy liên hệ qua các kênh bên dưới.",
+        contact_linkedin: "Hồ sơ LinkedIn",
+        contact_github: "Hồ sơ GitHub",
+
+        // Footer
+        footer_text: "Tran Dang Dung. Xây dựng với",
+        footer_suffix: "và JavaScript hiện đại.",
+    },
+    en: {
+        // Nav
+        nav_about: "About",
+        nav_skills: "Skills",
+        nav_experience: "Experience",
+        nav_projects: "Projects",
+        nav_contact: "Contact",
+
+        // Hero
+        hero_badge: "Available for opportunities",
+        hero_subtitle_prefix: "I'm a ",
+        hero_description: "Experienced Mobile Developer with 3+ years building high-quality Android and cross-platform applications using <strong>Kotlin</strong> and <strong>Flutter</strong>.",
+        hero_btn_projects: "View Projects",
+        hero_btn_contact: "Get in Touch",
+        hero_btn_cv: "Download CV",
+        stat_years: "Years Exp.",
+        stat_projects: "Projects",
+        stat_certs: "Certifications",
+
+        // Typed roles
+        roles: [
+            "Mobile Developer",
+            "Flutter Expert",
+            "Kotlin Enthusiast",
+            "Clean Architecture Advocate",
+            "Cross-Platform Builder"
+        ],
+
+        // About
+        about_title: "About Me",
+        about_p1: 'Experienced Mobile Developer with over <span class="highlight">3 years</span> of hands-on experience in building high-quality Android and cross-platform applications using <span class="highlight">Kotlin</span> and <span class="highlight">Flutter</span>.',
+        about_p2: "Specialized in scalable architecture (MVVM, Clean Architecture, SOLID), performance optimization, CI/CD integration, and blockchain-based solutions. A strong team player with a focus on clean code, technical design, and continuous improvement.",
+        edu_title: "Education",
+        edu_desc: "B.IT — Posts & Telecommunications Institute of Technology",
+        edu_meta: "Class of 2024 · Grade: Very Good",
+        awards_title: "Awards",
+        awards_desc: "2nd Prize ICPC PTIT 2020 · Samsung Certificate",
+        awards_meta: "PTIT Olympic Informatics Team 2020 · Scholarship 2020-2024 · TOEIC 715",
+        location_title: "Location",
+        location_desc: "Hanoi, Vietnam",
+        location_meta: "Open to remote work",
+
+        // Skills
+        skills_title: "Tech Stack",
+        skills_mobile: "Mobile Development",
+        skills_arch: "Architecture",
+        skills_tools: "Tools & Workflow",
+
+        // Experience
+        exp_title: "Experience",
+        exp_cmc_role: "Mobile Developer",
+        exp_cmc_company: "CMC Global",
+        exp_cmc_period: "Jan 2026 — Present",
+        exp_cmc_1: "Joined the Smart Board project — a smart whiteboard app supporting real-time collaboration.",
+        exp_cmc_2: "Implemented onboarding flow guiding new users with a smooth and intuitive experience.",
+        exp_cmc_3: "Developed video call and screen sharing features using <strong>Janus WebRTC Gateway</strong>, integrated with Native C++ via FFI.",
+        exp_cmc_4: "Used WebSocket for real-time communication, Bloc/Cubit for state management, and Clean Architecture.",
+        exp_teko_role: "Software Developer",
+        exp_teko_company: "TEKO Solution",
+        exp_teko_period: "Dec 2022 — Dec 2025",
+        exp_teko_1: "Designed and extended a scalable mobile carbon app using Flutter, supporting multiple merchants with reusable architecture.",
+        exp_teko_2: 'Developed a high-performance DeFi investment tracker app with Flutter, improving app speed and responsiveness by <strong>30%</strong>.',
+        exp_teko_3: 'Built Cardano blockchain transaction modules using Kotlin Multiplatform (KMP) and published them to npm.js, reducing front-end development time by <strong>15%</strong>.',
+        exp_teko_4: "Maintained and enhanced a Kotlin Native e-commerce app base, enabling multi-merchant deployment with shared infrastructure.",
+        exp_hola_role: "Android Developer",
+        exp_hola_company: "HOLA 360 & Teasoft",
+        exp_hola_period: "Sep 2021 — Oct 2022",
+        exp_hola_1: "Developed Android applications from scratch using clean architecture and modern Android components.",
+        exp_hola_2: "Built key features and reusable UI components based on business requirements and client branding.",
+        exp_hola_3: "Refactored legacy code, improved performance, and ensured code quality through testing and code reviews.",
+        exp_hola_4: "Collaborated with design and backend teams to deliver consistent and reliable user experiences.",
+
+        // Projects
+        projects_title: "Featured Projects",
+        proj_smartboard_name: "Smart Board",
+        proj_smartboard_desc: "A smart whiteboard application supporting real-time collaboration, video calls and screen sharing using Janus WebRTC.",
+        proj_smartboard_h1: "Onboarding flow and new user guidance",
+        proj_smartboard_h2: "Video call & screen share via Janus + Native C++ FFI",
+        proj_karbon_name: "KarbonMap",
+        proj_karbon_desc: "A Flutter-based mobile app supporting MRV processes and forest/land management for government and environmental organizations.",
+        proj_karbon_h1: "Modular features with independent navigation & state management",
+        proj_karbon_h2: "Caching and observation modules for traceability & performance metrics",
+        proj_nio_name: "Nio Wallet",
+        proj_nio_desc: "A cross-platform cryptocurrency management app built with Flutter & Kotlin Multiplatform, published on Google Play and the App Store.",
+        proj_nio_h1: "Real-time data streaming with SSE, reducing polling by 15%",
+        proj_nio_h2: "Cross-chain asset tracing for Cardano, EVM, Cosmos",
+        proj_yield_name: "Yield-Aggregator",
+        proj_yield_desc: "A protocol for supplying and borrowing tokens via Danogo Float pools on the Cardano blockchain.",
+        proj_yield_h1: "Token supply/withdraw features with Kotlin-based transactions",
+        proj_yield_h2: "Integrated with Liqwid Protocol to boost yield via lending markets",
+        proj_smartpos_name: "Smart-POS",
+        proj_smartpos_desc: "A hybrid B2B e-commerce platform for VNShop, Phong Vu, and more — combining native Android and embedded Flutter modules.",
+        proj_smartpos_h1: "Flutter-based user module integrated via MethodChannel",
+        proj_smartpos_h2: "UI for authentication, profile management & app stability",
+
+        // Contact
+        contact_title: "Get In Touch",
+        contact_desc: "Interested in collaborating or just want to say hi? Feel free to reach out through any of these platforms.",
+        contact_linkedin: "LinkedIn Profile",
+        contact_github: "GitHub Profile",
+
+        // Footer
+        footer_text: "Tran Dang Dung. Built with",
+        footer_suffix: "and modern JavaScript.",
+    }
+};
+
+export default translations;
