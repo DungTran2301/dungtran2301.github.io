@@ -3,526 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tran Dang Dung — Mobile Developer | Flutter & Kotlin Expert</title>
-    <meta name="description" content="Experienced Mobile Developer with 4+ years building high-quality Android and cross-platform apps using Kotlin and Flutter. Specialized in Clean Architecture, MVVM, and blockchain solutions.">
-    <meta name="keywords" content="Tran Dang Dung, Mobile Developer, Flutter, Kotlin, Android, KMP, Clean Architecture, MVVM">
-    <meta name="author" content="Tran Dang Dung">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Tran Dang Dung — Mobile Developer">
-    <meta property="og:description" content="Experienced Mobile Developer with 4+ years building high-quality Android and cross-platform apps using Kotlin and Flutter.">
+    <title>Marcus — Freelance Mobile Developer</title>
+    <meta name="description" content="Senior freelance mobile developer with 5+ years of experience building Android, iOS, and cross-platform apps for fintech, e-commerce, and enterprise clients.">
+    <meta property="og:title" content="Marcus — Freelance Mobile Developer">
+    <meta property="og:description" content="Senior mobile developer with 5+ years of experience. Android, iOS, and cross-platform apps published on Google Play and the App Store.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="./assets/favicon.png">
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/favicon.png">
     <link rel="apple-touch-icon" href="./assets/favicon.png">
     <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- AOS Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Marked.js for Markdown parsing -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-    <!-- Scroll Progress Bar -->
-    <div id="scroll-progress"></div>
-
-    <div id="custom-cursor"></div>
-
-    <div id="app">
-        <!-- Particle Network Background -->
-        <canvas id="particle-canvas"></canvas>
-
-        <header>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#top" class="brand">Marcus</a>
             <nav>
-                <div class="logo">Dung<span class="logo-dot">.</span></div>
-                <button id="menu-toggle" class="hamburger" aria-label="Open Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="#about" data-i18n="nav_about">About</a></li>
-                    <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
-                    <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
-                    <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
-                    <li><a href="#books" data-i18n="nav_books">Books</a></li>
-                    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-                    <li>
-                        <button id="lang-toggle" class="lang-btn" aria-label="Switch Language">
-                            <span class="lang-label">VI</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
-                            <svg class="sun-icon" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58l-1.41-1.41c-.39-.39-1.03-.39-1.42 0s-.39 1.03 0 1.42l1.41 1.41c.39.39 1.03.39 1.42 0s.39-1.03 0-1.42zm14.85 14.85l-1.41-1.41c-.39-.39-1.03-.39-1.42 0s-.39 1.03 0 1.42l1.41 1.41c.39.39 1.03.39 1.42 0s.39-1.03 0-1.42zM4.58 18.01l-1.41 1.41c-.39.39-.39 1.03 0 1.42s1.03.39 1.42 0l1.41-1.41c.39-.39.39-1.03 0-1.42s-1.03-.39-1.42 0zM18.01 5.99l1.41-1.41c.39-.39.39-1.03 0-1.42s-1.03-.39-1.42 0l-1.41 1.41c-.39.39-.39 1.03 0 1.42s1.03.39 1.42 0z"/></svg>
-                        </button>
-                    </li>
-                </ul>
+                <a href="#services">Services</a>
+                <a href="#work">Work</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
             </nav>
-        </header>
-
-        <main>
-            <!-- ═══════════════ HERO ═══════════════ -->
-            <section id="hero">
-                <div class="hero-content">
-                    <div class="avatar-wrapper" data-aos="zoom-in">
-                        <img src="./assets/avatar.jpg" alt="Tran Dang Dung" class="avatar" loading="eager">
-                    </div>
-                    <h1 class="gradient-text reveal-up" style="--delay: 1">Tran Dang Dung</h1>
-                    <p class="subtitle reveal-up" style="--delay: 2"><span data-i18n="hero_subtitle_prefix">I'm a </span><span id="typed-role" class="highlight"></span><span class="cursor-blink">|</span></p>
-                    <p class="hero-description reveal-up" style="--delay: 3" data-i18n-html="hero_description">Experienced Mobile Developer with 4+ years building high-quality Android and cross-platform applications using <strong>Kotlin</strong> and <strong>Flutter</strong>.</p>
-                    <div class="cta-group reveal-up" style="--delay: 4">
-                        <a href="#projects" class="btn primary magnetic"><i class="fas fa-rocket"></i> <span data-i18n="hero_btn_projects">View Projects</span></a>
-                        <a href="#contact" class="btn secondary magnetic"><i class="fas fa-envelope"></i> <span data-i18n="hero_btn_contact">Get in Touch</span></a>
-                        <a href="#" class="btn ghost magnetic" id="download-cv"><i class="fas fa-download"></i> <span data-i18n="hero_btn_cv">Download CV</span></a>
-                    </div>
-                    <div class="hero-stats reveal-up" style="--delay: 5">
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
-                            <span class="stat-label" data-i18n="stat_years">Years Exp.</span>
-                        </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
-                            <span class="stat-label" data-i18n="stat_projects">Projects</span>
-                        </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="3">0</span>
-                            <span class="stat-label" data-i18n="stat_certs">Certifications</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ═══════════════ ABOUT (BENTO GRID) ═══════════════ -->
-            <section id="about">
-                <h2 class="section-title reveal-up" data-i18n="about_title">About Me</h2>
-                <div class="bento-grid">
-                    <div class="bento-item bento-main glass tilt-card" data-aos="fade-up" data-aos-delay="100">
-                        <p data-i18n-html="about_p1">Experienced Mobile Developer with over <span class="highlight">4 years</span> of hands-on experience in building high-quality Android and cross-platform applications using <span class="highlight">Kotlin</span> and <span class="highlight">Flutter</span>.</p>
-                        <p data-i18n="about_p2">Specialized in scalable architecture (MVVM, Clean Architecture, SOLID), performance optimization, CI/CD integration, and blockchain-based solutions. A strong team player with a focus on clean code, technical design, and continuous improvement.</p>
-                    </div>
-                    <div class="bento-item glass tilt-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="bento-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <h4 data-i18n="edu_title">Education</h4>
-                        <p data-i18n="edu_desc">B.IT — Posts & Telecommunications Institute of Technology</p>
-                        <span class="info-meta" data-i18n="edu_meta">Class of 2024 · Grade: Very Good</span>
-                    </div>
-                    <div class="bento-item glass tilt-card" data-aos="fade-up" data-aos-delay="250">
-                        <div class="bento-icon"><i class="fas fa-trophy"></i></div>
-                        <h4 data-i18n="award_2020_title">2020</h4>
-                        <p data-i18n="award_2020_desc">2nd Prize ICPC PTIT · Olympic Informatics Team</p>
-                        <span class="info-meta" data-i18n="award_2020_meta">Scholarship 2020–2024</span>
-                    </div>
-                    <div class="bento-item glass tilt-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="bento-icon"><i class="fas fa-medal"></i></div>
-                        <h4 data-i18n="award_2018_title">2018</h4>
-                        <p data-i18n="award_2018_desc">3rd Prize — Provincial IT Olympiad</p>
-                        <span class="info-meta" data-i18n="award_2018_meta">2nd Prize — Youth Informatics (Non-specialized)</span>
-                    </div>
-                    <div class="bento-item glass tilt-card" data-aos="fade-up" data-aos-delay="350">
-                        <div class="bento-icon"><i class="fas fa-medal"></i></div>
-                        <h4 data-i18n="award_2017_title">2017</h4>
-                        <p data-i18n="award_2017_desc">Encouragement Prize — Provincial IT Olympiad</p>
-                        <span class="info-meta" data-i18n="award_2017_meta">3rd Prize — Youth Informatics (Non-specialized)</span>
-                    </div>
-                    <div class="bento-item glass tilt-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="bento-icon"><i class="fas fa-certificate"></i></div>
-                        <h4 data-i18n="award_cert_title">Certifications</h4>
-                        <p data-i18n="award_cert_desc">Samsung Software Competency Certificate</p>
-                        <span class="info-meta" data-i18n="award_cert_meta">TOEIC 715</span>
-                    </div>
-                    <div class="bento-item glass tilt-card" data-aos="fade-up" data-aos-delay="450">
-                        <div class="bento-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <h4 data-i18n="location_title">Location</h4>
-                        <p data-i18n="location_desc">Hanoi, Vietnam</p>
-                        <span class="info-meta" data-i18n="location_meta">Open to remote work</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ═══════════════ SKILLS (MARQUEE) ═══════════════ -->
-            <section id="skills">
-                <h2 class="section-title reveal-up" data-i18n="skills_title">Tech Stack</h2>
-                <!-- Marquee Row 1 -->
-                <div class="marquee-wrapper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="marquee-track">
-                        <div class="marquee-content">
-                            <span class="marquee-tag">Flutter</span>
-                            <span class="marquee-tag">Dart</span>
-                            <span class="marquee-tag">Kotlin</span>
-                            <span class="marquee-tag">KMP</span>
-                            <span class="marquee-tag">Jetpack Compose</span>
-                            <span class="marquee-tag">Native C++</span>
-                            <span class="marquee-tag">Coroutines</span>
-                            <span class="marquee-tag">Dagger/Hilt</span>
-                            <span class="marquee-tag">Room</span>
-                            <span class="marquee-tag">SQLite</span>
-                            <span class="marquee-tag">Janus WebRTC</span>
-                            <span class="marquee-tag">WebSocket</span>
-                            <span class="marquee-tag">Golang</span>
-                            <span class="marquee-tag">Spring Boot</span>
-                            <span class="marquee-tag">Django</span>
-                            <span class="marquee-tag">Flask</span>
-                        </div>
-                        <div class="marquee-content" aria-hidden="true">
-                            <span class="marquee-tag">Flutter</span>
-                            <span class="marquee-tag">Dart</span>
-                            <span class="marquee-tag">Kotlin</span>
-                            <span class="marquee-tag">KMP</span>
-                            <span class="marquee-tag">Jetpack Compose</span>
-                            <span class="marquee-tag">Native C++</span>
-                            <span class="marquee-tag">Coroutines</span>
-                            <span class="marquee-tag">Dagger/Hilt</span>
-                            <span class="marquee-tag">Room</span>
-                            <span class="marquee-tag">SQLite</span>
-                            <span class="marquee-tag">Janus WebRTC</span>
-                            <span class="marquee-tag">WebSocket</span>
-                            <span class="marquee-tag">Golang</span>
-                            <span class="marquee-tag">Spring Boot</span>
-                            <span class="marquee-tag">Django</span>
-                            <span class="marquee-tag">Flask</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Marquee Row 2 (reverse) -->
-                <div class="marquee-wrapper reverse" data-aos="fade-up" data-aos-delay="200">
-                    <div class="marquee-track">
-                        <div class="marquee-content">
-                            <span class="marquee-tag outline">Clean Architecture</span>
-                            <span class="marquee-tag outline">MVVM</span>
-                            <span class="marquee-tag outline">SOLID</span>
-                            <span class="marquee-tag outline">Bloc / Cubit</span>
-                            <span class="marquee-tag outline">Modular Design</span>
-                            <span class="marquee-tag outline">Reactive Programming</span>
-                            <span class="marquee-tag outline">GitLab CI/CD</span>
-                            <span class="marquee-tag outline">Agile/Scrum</span>
-                            <span class="marquee-tag outline">Jira</span>
-                            <span class="marquee-tag outline">Figma</span>
-                        </div>
-                        <div class="marquee-content" aria-hidden="true">
-                            <span class="marquee-tag outline">Clean Architecture</span>
-                            <span class="marquee-tag outline">MVVM</span>
-                            <span class="marquee-tag outline">SOLID</span>
-                            <span class="marquee-tag outline">Bloc / Cubit</span>
-                            <span class="marquee-tag outline">Modular Design</span>
-                            <span class="marquee-tag outline">Reactive Programming</span>
-                            <span class="marquee-tag outline">GitLab CI/CD</span>
-                            <span class="marquee-tag outline">Agile/Scrum</span>
-                            <span class="marquee-tag outline">Jira</span>
-                            <span class="marquee-tag outline">Figma</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Skill Categories (still present, compact) -->
-                <div class="skills-grid">
-                    <div class="skill-category glass tilt-card" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="skill-header">
-                            <i class="fas fa-mobile-alt"></i>
-                            <h3 data-i18n="skills_mobile">Mobile Development</h3>
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Flutter</span>
-                            <span class="skill-tag">Dart</span>
-                            <span class="skill-tag">Kotlin</span>
-                            <span class="skill-tag">KMP</span>
-                            <span class="skill-tag">Jetpack Compose</span>
-                            <span class="skill-tag">Native C++</span>
-                            <span class="skill-tag">Coroutines</span>
-                            <span class="skill-tag">Dagger/Hilt</span>
-                            <span class="skill-tag">Room</span>
-                            <span class="skill-tag">SQLite</span>
-                        </div>
-                    </div>
-                    <div class="skill-category glass tilt-card" data-aos="zoom-in" data-aos-delay="150">
-                        <div class="skill-header">
-                            <i class="fas fa-server"></i>
-                            <h3 data-i18n="skills_backend">Backend Development</h3>
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Golang</span>
-                            <span class="skill-tag">Kotlin Spring Boot</span>
-                            <span class="skill-tag">Python Django</span>
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">REST API</span>
-                            <span class="skill-tag">gRPC</span>
-                        </div>
-                    </div>
-                    <div class="skill-category glass tilt-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="skill-header">
-                            <i class="fas fa-cubes"></i>
-                            <h3 data-i18n="skills_arch">Architecture</h3>
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Clean Architecture</span>
-                            <span class="skill-tag">MVVM</span>
-                            <span class="skill-tag">SOLID</span>
-                            <span class="skill-tag">Modular Design</span>
-                            <span class="skill-tag">Bloc / Cubit</span>
-                            <span class="skill-tag">Reactive Programming</span>
-                        </div>
-                    </div>
-                    <div class="skill-category glass tilt-card" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="skill-header">
-                            <i class="fas fa-tools"></i>
-                            <h3 data-i18n="skills_tools">Tools & Workflow</h3>
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">GitLab CI/CD</span>
-                            <span class="skill-tag">Agile/Scrum</span>
-                            <span class="skill-tag">Kanban</span>
-                            <span class="skill-tag">Jira</span>
-                            <span class="skill-tag">Confluence</span>
-                            <span class="skill-tag">Figma</span>
-                            <span class="skill-tag">WebSocket</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ═══════════════ EXPERIENCE TIMELINE ═══════════════ -->
-            <section id="experience">
-                <h2 class="section-title reveal-up" data-i18n="exp_title">Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass tilt-card">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3 data-i18n="exp_cmc_role">Mobile Developer</h3>
-                                    <span class="company" data-i18n="exp_cmc_company">CMC Global</span>
-                                </div>
-                                <span class="period" data-i18n="exp_cmc_period">Jan 2026 — Present</span>
-                            </div>
-                            <ul class="timeline-list">
-                                <li data-i18n-html="exp_cmc_1">Joined the Smart Board project — a smart whiteboard app supporting real-time collaboration.</li>
-                                <li data-i18n-html="exp_cmc_2">Implemented onboarding flow guiding new users with a smooth and intuitive experience.</li>
-                                <li data-i18n-html="exp_cmc_3">Developed video call and screen sharing features using <strong>Janus WebRTC Gateway</strong>, integrated with Native C++ via FFI.</li>
-                                <li data-i18n-html="exp_cmc_4">Used WebSocket for real-time communication, Bloc/Cubit for state management, and Clean Architecture.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass tilt-card">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3 data-i18n="exp_teko_role">Software Developer</h3>
-                                    <span class="company" data-i18n="exp_teko_company">TEKO Solution</span>
-                                </div>
-                                <span class="period" data-i18n="exp_teko_period">Dec 2022 — Dec 2025</span>
-                            </div>
-                            <ul class="timeline-list">
-                                <li data-i18n-html="exp_teko_1">Designed and extended a scalable mobile carbon app using Flutter, supporting multiple merchants with reusable architecture.</li>
-                                <li data-i18n-html="exp_teko_2">Developed a high-performance DeFi investment tracker app with Flutter, improving app speed and responsiveness by <strong>30%</strong>.</li>
-                                <li data-i18n-html="exp_teko_3">Built Cardano blockchain transaction modules using Kotlin Multiplatform (KMP) and published them to npm.js, reducing front-end development time by <strong>15%</strong>.</li>
-                                <li data-i18n-html="exp_teko_4">Maintained and enhanced a Kotlin Native e-commerce app base, enabling multi-merchant deployment with shared infrastructure.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass tilt-card">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3 data-i18n="exp_hola_role">Android Developer</h3>
-                                    <span class="company" data-i18n="exp_hola_company">HOLA 360 & Teasoft</span>
-                                </div>
-                                <span class="period" data-i18n="exp_hola_period">Sep 2021 — Oct 2022</span>
-                            </div>
-                            <ul class="timeline-list">
-                                <li data-i18n="exp_hola_1">Developed Android applications from scratch using clean architecture and modern Android components.</li>
-                                <li data-i18n="exp_hola_2">Built key features and reusable UI components based on business requirements and client branding.</li>
-                                <li data-i18n="exp_hola_3">Refactored legacy code, improved performance, and ensured code quality through testing and code reviews.</li>
-                                <li data-i18n="exp_hola_4">Collaborated with design and backend teams to deliver consistent and reliable user experiences.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ═══════════════ PROJECTS ═══════════════ -->
-            <section id="projects">
-                <h2 class="section-title reveal-up" data-i18n="projects_title">Featured Projects</h2>
-                <div class="project-grid">
-                    <article class="project-card glass tilt-card" data-aos="zoom-in" data-aos-delay="50" data-project="smartboard">
-                        <div class="project-image" id="project-img-smartboard"></div>
-                        <div class="project-info">
-                            <h3 data-i18n="proj_smartboard_name">Smart Board</h3>
-                            <p data-i18n="proj_smartboard_desc">A smart whiteboard application supporting real-time collaboration, video calls and screen sharing using Janus WebRTC.</p>
-                            <ul class="project-highlights">
-                                <li data-i18n="proj_smartboard_h1">Onboarding flow and new user guidance</li>
-                                <li data-i18n="proj_smartboard_h2">Video call & screen share via Janus + Native C++ FFI</li>
-                            </ul>
-                            <div class="tags">
-                                <span class="tag">Flutter</span>
-                                <span class="tag">Native C++</span>
-                                <span class="tag">Janus</span>
-                                <span class="tag">WebSocket</span>
-                                <span class="tag">Bloc/Cubit</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="project-card glass tilt-card" data-aos="zoom-in" data-aos-delay="100" data-project="karbon">
-                        <div class="project-image" id="project-img-karbon"></div>
-                        <div class="project-info">
-                            <h3 data-i18n="proj_karbon_name">KarbonMap</h3>
-                            <p data-i18n="proj_karbon_desc">A Flutter-based mobile app supporting MRV processes and forest/land management for government and environmental organizations.</p>
-                            <ul class="project-highlights">
-                                <li data-i18n="proj_karbon_h1">Modular features with independent navigation & state management</li>
-                                <li data-i18n="proj_karbon_h2">Caching and observation modules for traceability & performance metrics</li>
-                            </ul>
-                            <div class="tags">
-                                <span class="tag">Flutter</span>
-                                <span class="tag">Bloc</span>
-                                <span class="tag">MobX</span>
-                                <span class="tag">Drift</span>
-                                <span class="tag">OpenTelemetry</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="project-card glass tilt-card" data-aos="zoom-in" data-aos-delay="200" data-project="nio">
-                        <div class="project-image" id="project-img-nio"></div>
-                        <div class="project-info">
-                            <h3 data-i18n="proj_nio_name">Nio Wallet</h3>
-                            <p data-i18n="proj_nio_desc">A cross-platform cryptocurrency management app built with Flutter & Kotlin Multiplatform, published on Google Play and the App Store.</p>
-                            <ul class="project-highlights">
-                                <li data-i18n="proj_nio_h1">Real-time data streaming with SSE, reducing polling by 15%</li>
-                                <li data-i18n="proj_nio_h2">Cross-chain asset tracing for Cardano, EVM, Cosmos</li>
-                            </ul>
-                            <div class="tags">
-                                <span class="tag">Flutter</span>
-                                <span class="tag">GetX</span>
-                                <span class="tag">Drift</span>
-                                <span class="tag">SSE</span>
-                                <span class="tag">KMP</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="project-card glass tilt-card" data-aos="zoom-in" data-aos-delay="300" data-project="yield">
-                        <div class="project-image" id="project-img-yield"></div>
-                        <div class="project-info">
-                            <h3 data-i18n="proj_yield_name">Yield-Aggregator</h3>
-                            <p data-i18n="proj_yield_desc">A protocol for supplying and borrowing tokens via Danogo Float pools on the Cardano blockchain.</p>
-                            <ul class="project-highlights">
-                                <li data-i18n="proj_yield_h1">Token supply/withdraw features with Kotlin-based transactions</li>
-                                <li data-i18n="proj_yield_h2">Integrated with Liqwid Protocol to boost yield via lending markets</li>
-                            </ul>
-                            <div class="tags">
-                                <span class="tag">Kotlin Multiplatform</span>
-                                <span class="tag">Cardano</span>
-                                <span class="tag">DeFi</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="project-card glass tilt-card" data-aos="zoom-in" data-aos-delay="400" data-project="smartpos">
-                        <div class="project-image" id="project-img-smartpos"></div>
-                        <div class="project-info">
-                            <h3 data-i18n="proj_smartpos_name">Smart-POS</h3>
-                            <p data-i18n="proj_smartpos_desc">A hybrid B2B e-commerce platform for VNShop, Phong Vu, and more — combining native Android and embedded Flutter modules.</p>
-                            <ul class="project-highlights">
-                                <li data-i18n="proj_smartpos_h1">Flutter-based user module integrated via MethodChannel</li>
-                                <li data-i18n="proj_smartpos_h2">UI for authentication, profile management & app stability</li>
-                            </ul>
-                            <div class="tags">
-                                <span class="tag">Android</span>
-                                <span class="tag">Dagger</span>
-                                <span class="tag">Retrofit</span>
-                                <span class="tag">Flutter</span>
-                                <span class="tag">MethodChannel</span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
- 
-            <!-- ═══════════════ BOOKS ═══════════════ -->
-            <section id="books">
-                <h2 class="section-title reveal-up" data-i18n="books_title">My Bookshelf</h2>
-                <div class="books-grid" id="books-grid">
-                    <!-- Books will be injected here by main.js -->
-                </div>
-            </section>
-
-            <!-- ═══════════════ CONTACT ═══════════════ -->
-            <section id="contact">
-                <h2 class="section-title reveal-up" data-i18n="contact_title">Get In Touch</h2>
-                <div class="contact-container glass tilt-card">
-                    <p data-i18n="contact_desc">Interested in collaborating or just want to say hi? Feel free to reach out through any of these platforms.</p>
-                    <div class="contact-cards">
-                        <a href="mailto:dangdung2301@gmail.com" class="contact-card magnetic">
-                            <i class="fas fa-envelope"></i>
-                            <span>dangdung2301@gmail.com</span>
-                        </a>
-                        <a href="tel:+84349878304" class="contact-card magnetic">
-                            <i class="fas fa-phone"></i>
-                            <span>0349 878 304</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/tran-dang-dung-073158221/" target="_blank" rel="noopener noreferrer" class="contact-card magnetic">
-                            <i class="fab fa-linkedin"></i>
-                            <span data-i18n="contact_linkedin">LinkedIn Profile</span>
-                        </a>
-                        <a href="https://github.com/DungTran2301" target="_blank" rel="noopener noreferrer" class="contact-card magnetic">
-                            <i class="fab fa-github"></i>
-                            <span data-i18n="contact_github">GitHub Profile</span>
-                        </a>
-                        <a href="https://www.instagram.com/dungtran_23/" target="_blank" rel="noopener noreferrer" class="contact-card magnetic">
-                            <i class="fab fa-instagram"></i>
-                            <span data-i18n="contact_instagram">Instagram</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 <span data-i18n="footer_text">Tran Dang Dung. Built with</span> <i class="fas fa-heart" style="color: var(--primary-color);"></i> <span data-i18n="footer_suffix">and modern JavaScript.</span></p>
-        </footer>
-    </div>
-
-    <!-- Project Modal -->
-    <div id="project-modal" class="modal-overlay">
-        <div class="modal-content glass">
-            <button class="modal-close" aria-label="Close">&times;</button>
-            <div class="modal-header">
-                <div class="modal-icon" id="modal-icon"></div>
-                <div>
-                    <h2 id="modal-title"></h2>
-                    <p id="modal-desc" class="modal-desc"></p>
-                </div>
-            </div>
-            <div class="modal-body">
-                <h4>Key Highlights</h4>
-                <ul id="modal-highlights"></ul>
-                <h4>Technologies</h4>
-                <div id="modal-tags" class="tags"></div>
-            </div>
         </div>
-    </div>
+    </header>
 
-    <!-- Book Modal -->
-    <div id="book-modal" class="modal-overlay">
-        <div class="modal-content glass book-modal-content">
-            <button class="modal-close" aria-label="Close">&times;</button>
-            <div class="modal-header">
+    <main id="top">
+        <section class="hero container">
+            <img src="./assets/avatar.jpg" alt="Marcus" class="avatar" width="120" height="120">
+            <p class="eyebrow">Available for freelance projects</p>
+            <h1>Senior mobile developer building fast, reliable apps for Android and iOS.</h1>
+            <p class="lead">I'm Marcus — 5+ years shipping native and cross-platform mobile apps for fintech, e-commerce, and enterprise teams. I take projects from architecture to App Store and Google Play release. Based in Hanoi, working remotely.</p>
+            <ul class="facts">
+                <li><strong>5+</strong> years experience</li>
+                <li><strong>Google Play &amp; App Store</strong> published</li>
+                <li><strong>Technical owner</strong> on production teams</li>
+            </ul>
+        </section>
+
+        <section id="services" class="container">
+            <h2>What I can do for you</h2>
+            <div class="grid-3">
                 <div>
-                    <h2 id="book-modal-title"></h2>
-                    <p id="book-modal-author" class="modal-author"></p>
-                    <p id="book-modal-date" class="modal-date"></p>
+                    <h3>Mobile app development</h3>
+                    <p>Native Android (Kotlin, Java), iOS (Swift), and cross-platform apps with Flutter and Kotlin Multiplatform, built on Clean Architecture.</p>
+                </div>
+                <div>
+                    <h3>Real-time &amp; offline-first</h3>
+                    <p>Video calls, live data feeds, and offline sync that works on unstable networks, using WebRTC, WebSocket, SSE, and Drift.</p>
+                </div>
+                <div>
+                    <h3>Release &amp; performance</h3>
+                    <p>CI/CD pipelines, store submission and compliance, profiling, and frame-rate and memory optimization.</p>
+                </div>
+                <div>
+                    <h3>Web frontend</h3>
+                    <p>Vue 3, React, and TypeScript interfaces, including full-stack modules with Spring Boot and PostgreSQL.</p>
+                </div>
+                <div>
+                    <h3>Security &amp; fintech</h3>
+                    <p>Wallets, payments, biometric login, secure storage, and hardware token authentication.</p>
+                </div>
+                <div>
+                    <h3>Code review &amp; mentoring</h3>
+                    <p>Architecture guidance, code reviews, and testing practices to help your team ship maintainable code.</p>
                 </div>
             </div>
-            <div class="modal-body markdown-content" id="book-modal-content">
-                <!-- Markdown content will be injected here -->
-            </div>
-        </div>
-    </div>
+        </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="module" src="./main.js"></script>
+        <section id="work" class="container">
+            <h2>Selected work</h2>
+            <ul class="list">
+                <li>
+                    <h3>MeetingMate — real-time collaboration suite</h3>
+                    <p class="meta">2026 · Android, Windows, Smartboards · Team of 6</p>
+                    <p>Technical owner for HD multi-party video conferencing and screen sharing for a Korean client. Built a Janus WebRTC client in Flutter, a native C++ system-audio capture plugin, enterprise hardware token login, and an optimized smartboard pen and touch rendering pipeline.</p>
+                    <p class="meta">Flutter · WebRTC · Janus · Socket.io · BLoC · C++</p>
+                </li>
+                <li>
+                    <h3>Nio Wallet — crypto asset management</h3>
+                    <p class="meta">2023–2025 · Google Play &amp; App Store</p>
+                    <p>Owned the mobile architecture end to end. Designed a real-time price and transaction feed with SSE, biometric and secure-storage authentication, and the CI/CD release pipeline.</p>
+                    <p class="meta">Flutter · GetX · Drift · SSE · REST</p>
+                </li>
+                <li>
+                    <h3>KarbonMap — offline-first field app</h3>
+                    <p class="meta">2023–2024 · Government and NGO clients</p>
+                    <p>Designed offline-first architecture with background sync queues and conflict resolution between field devices and servers. Added observability with OpenTelemetry.</p>
+                    <p class="meta">Flutter · BLoC · MobX · Drift · OpenTelemetry</p>
+                </li>
+                <li>
+                    <h3>Smart-POS — multi-merchant e-commerce</h3>
+                    <p class="meta">2022–2023 · VNShop, Phong Vu</p>
+                    <p>Embedded Flutter modules for authentication and checkout inside a native Android app, connected through MethodChannels, with payment gateway and analytics integration.</p>
+                    <p class="meta">Android · Flutter · Dagger/Hilt · Retrofit</p>
+                </li>
+                <li>
+                    <h3>Enterprise CRM — invoice and payment modules</h3>
+                    <p class="meta">2026 · Web · Team of 8</p>
+                    <p>Built invoice and payment modules end to end, with audit trails, automated billing milestones, and real-time updates over WebSocket/STOMP.</p>
+                    <p class="meta">Vue 3 · TypeScript · Spring Boot 3 · PostgreSQL</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="experience" class="container">
+            <h2>Experience</h2>
+            <ul class="list">
+                <li>
+                    <h3>Senior Software Developer — CMC Global</h3>
+                    <p class="meta">Jan 2026 – Present</p>
+                    <p>Technical owner for video conferencing and screen sharing in MeetingMate, then full-stack developer on an enterprise CRM. Set up multi-flavor Android and MSIX CI/CD pipelines.</p>
+                </li>
+                <li>
+                    <h3>Mobile Developer — TEKO Solution</h3>
+                    <p class="meta">Dec 2022 – Jan 2026</p>
+                    <p>Led Nio Wallet from start to store release. Built offline-first sync, real-time streaming, and Kotlin Multiplatform modules published to npm. Profiled and optimized a DeFi tracker, resolved Google Play policy escalations, and mentored junior and mid-level developers.</p>
+                </li>
+                <li>
+                    <h3>Mobile / Android Developer — HOLA 360 &amp; Teasoft</h3>
+                    <p class="meta">Sep 2021 – Oct 2022</p>
+                    <p>Built apps from scratch with Clean Architecture, including camera, OCR document scanning, and biometric flows. Refactored legacy code and kept test coverage high.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="skills" class="container">
+            <h2>Tech stack</h2>
+            <dl class="stack">
+                <dt>Mobile</dt>
+                <dd>Flutter, Dart, Kotlin, Java, Swift, Platform Channels, FCM, deep linking</dd>
+                <dt>Architecture</dt>
+                <dd>Clean Architecture, feature-based modules, SOLID, MVVM, GetIt, Dagger/Hilt</dd>
+                <dt>State management</dt>
+                <dd>BLoC, Provider, GetX, MobX</dd>
+                <dt>Real-time &amp; networking</dt>
+                <dd>REST, WebSocket, WebRTC, SSE, Socket.io</dd>
+                <dt>Storage &amp; security</dt>
+                <dd>Drift, Room, SQLite, Hive, secure storage, biometrics</dd>
+                <dt>Web</dt>
+                <dd>Vue 3, React, TypeScript, Pinia, Spring Boot, PostgreSQL</dd>
+                <dt>Quality &amp; observability</dt>
+                <dd>Unit, widget, and integration tests, Flutter DevTools, Sentry, Crashlytics, OpenTelemetry</dd>
+                <dt>Release</dt>
+                <dd>Google Play Console, App Store Connect, TestFlight, GitLab CI/CD, GitHub Actions</dd>
+            </dl>
+        </section>
+
+        <section id="about" class="container">
+            <h2>Background</h2>
+            <p><strong>Education:</strong> Bachelor of Information Technology, GPA 3.53 / 4.0.</p>
+            <p><strong>Languages:</strong> English (professional working), Vietnamese (native).</p>
+        </section>
+
+        <section id="contact" class="container contact">
+            <h2>Let's work together</h2>
+            <p class="lead">Have a project in mind? Send me a short description and I'll get back to you.</p>
+            <a href="mailto:dangdung2301@gmail.com" class="btn">dangdung2301@gmail.com</a>
+            <p class="links">
+                <a href="https://wa.me/84349878304" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a href="https://www.linkedin.com/in/tran-dang-dung-073158221/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/DungTran2301" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2026 Marcus</p>
+    </footer>
 </body>
 </html>
